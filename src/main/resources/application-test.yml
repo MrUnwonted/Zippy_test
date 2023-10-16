@@ -1,0 +1,34 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://192.168.1.103:3306/zippy_test
+    password: Master@123*#
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        show_sql: true
+        user_sql_comments: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    web: debug
+
+server:
+  address: 192.168.1.41
+  port: 8080
