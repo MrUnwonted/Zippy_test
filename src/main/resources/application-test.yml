@@ -12,7 +12,7 @@ management:
 spring:
   datasource:
     username: root
-    url: jdbc:mysql://192.168.1.103:3306/zippy_test
+    url: jdbc:mysql://192.168.1.103:3306/lifecrm_live
     password: Master@123*#
   jpa:
     generate-ddl: true
@@ -29,6 +29,6 @@ logging:
   level:
     web: debug
 
-server:
-  address: 192.168.1.41
-  port: 8080
+#server:
+#  address: 192.168.1.41
+#  port: 8080

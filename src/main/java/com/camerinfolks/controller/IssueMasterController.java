@@ -153,7 +153,8 @@ public class IssueMasterController {
 			{
 				appendQuery += " and i.issuestatus = " + searchCriteria.getIssuestatus();
 			}
-			 appendQuery += " order by i.id desc ";
+//			 appendQuery += " order by i.id desc ";
+			appendQuery += " order by i.id desc LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(loadIssuesQuery + appendQuery,new Object[]{});
 			for(Object[] issuesListOb : loadIssues)
 			{
@@ -959,7 +960,8 @@ public class IssueMasterController {
 //			{
 //				appendQuery += " and i.issuestatus = " + searchCriteria.getIssuestatus();
 //			}
-			 appendQuery += " order by i.id desc ";
+//			 appendQuery += " order by i.id desc ";
+			appendQuery += " order by i.id desc LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(loadIssuesQueryByAssignedUser + appendQuery,
 					new Object[]{searchCriteria.getUserid(),searchCriteria.getIssuestatus()});
 			for(Object[] issuesListOb : loadIssues)
@@ -1149,7 +1151,8 @@ public class IssueMasterController {
 			{
 				appendQuery += " and i.issuestatus = " + searchCriteria.getIssuestatus();
 			}
-			 appendQuery += " order by i.id desc ";
+//			 appendQuery += " order by i.id desc ";
+			appendQuery += " order by i.id desc LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(loadIssuesForGrid + appendQuery,new Object[]{});
 			for(Object[] issuesListOb : loadIssues)
 			{
@@ -1344,7 +1347,8 @@ public class IssueMasterController {
 			{
 				appendQuery += " and i.issuestatus = " + searchCriteria.getIssuestatus();
 			}
-			 appendQuery += " order by i.id desc ";
+//			 appendQuery += " order by i.id desc ";
+			appendQuery += " order by i.id desc LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(loadIssuesQueryNotAssigned + appendQuery,new Object[]{});
 			for(Object[] issuesListOb : loadIssues)
 			{
@@ -1578,7 +1582,8 @@ public class IssueMasterController {
 			{
 				appendQuery += " and i.issuestatus = " + searchCriteria.getIssuestatus();
 			}
-			 appendQuery += " order by i.id desc ";
+//			 appendQuery += " order by i.id desc ";
+			appendQuery += " order by i.id desc LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(loadIssuesAllIssuesAndReleased + appendQuery,new Object[]{});
 			for(Object[] issuesListOb : loadIssues)
 			{
@@ -1759,7 +1764,8 @@ public class IssueMasterController {
 			{
 				appendQuery += " and i.issuestatus = " + searchCriteria.getIssuestatus();
 			}
-			 appendQuery += " order by i.id desc ";
+//			 appendQuery += " order by i.id desc ";
+			appendQuery += " order by i.id desc LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(loadeveryIssuesQuery + appendQuery,new Object[]{});
 			for(Object[] issuesListOb : loadIssues)
 			{
@@ -2066,7 +2072,8 @@ public class IssueMasterController {
 			{
 				appendQuery += " and ia.`employee_type`= " + searchCriteria.getEmptype();
 			}						
-			 appendQuery += " GROUP BY i.id  ORDER BY i.id DESC ";
+//			 appendQuery += " GROUP BY i.id  ORDER BY i.id DESC ";
+			appendQuery += "GROUP BY i.id order by i.id DESC LIMIT 20 OFFSET 30";
 			List <Object []> loadIssues = baseRepository.findQuery(assignedqueryuserwise + appendQuery,new Object[]{});
 			for(Object[] issuesListOb : loadIssues)
 			{
