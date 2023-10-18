@@ -36,7 +36,7 @@ import java.util.UUID;
 
 //@CrossOrigin(maxAge = 3600,origins="*")
 @RestController
-@RequestMapping(value = "/ananthu")
+@RequestMapping(value = "/user")
 @EntityScan(basePackages = {"com.lifehis.*"})
 @XmlRootElement
 public class UserController {
